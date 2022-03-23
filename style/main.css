@@ -11,7 +11,11 @@ body
   height: 100%;
   text-align: center;
   font-size: 1vw;
-  margin-bottom: 250px;
+  /* margin-bottom: 250px; */
+}
+
+body .intro {
+  margin-bottom: 0px;
 }
 
 h1 {
