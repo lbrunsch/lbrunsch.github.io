@@ -11,7 +11,7 @@ body
   height: 100%;
   text-align: center;
   font-size: 1vw;
-  /* margin-bottom: 250px; */
+  margin-bottom: 250px;
 }
 
 body .intro {
@@ -143,6 +143,13 @@ section {
     margin-bottom: auto;
 }
 
+.research_projects {
+    display: flex;
+    padding: 40px;
+    text-align: left;
+    align-items: center;
+}
+
 .text {
   vertical-align: middle;
   font-size: 1.5vw;
@@ -167,6 +174,10 @@ section {
 
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1320px) {
+  .content {
+    font-size: 20px;
+    text-align: left;
+  }
   .text {
     font-size: 20px;
   }
@@ -180,6 +191,9 @@ section {
 
 @media screen and (max-width: 600px) {
   .intro {
+    padding: 20px;
+  }
+  .research_projects {
     padding: 20px;
   }
 }
@@ -219,12 +233,41 @@ img {
   display: inherit;
 }
 
+.megamart {
+  max-width: 300px;
+  height: auto;
+  width: auto;\9;
+  padding-right: 50px;
+}
+
+.lowcomote {
+  max-width: 300px;
+  height: auto;
+  width: auto;\9;
+  padding-right: 50px;
+}
+
+.in {
+  display: none;
+}
+
+.out {
+  display: inherit;
+}
+
 @media screen and (max-width: 1320px) {
   .selfy_in {
     display:inherit;
     text-align: center;
   }
   .selfy_out {
+    display: none;
+  }
+  .in {
+    display: inherit;
+    text-align: center;
+  }
+  .out {
     display: none;
   }
   footer {position: relative;}
