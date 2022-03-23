@@ -178,6 +178,12 @@ section {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .intro {
+    padding: 20px;
+  }
+}
+
 /* FOOTER */
 footer {
   /* display: none; */
