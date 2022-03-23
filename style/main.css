@@ -11,6 +11,7 @@ body
   height: 100%;
   text-align: center;
   font-size: 1vw;
+  margin-bottom: 250px;
 }
 
 h1 {
@@ -122,12 +123,12 @@ clicks on the icon. This class makes the topnav look good on small screens
 
 /* SECTION */
 section {
-  /* margin-bottom: 50px; */
   border-style: dashed;
   border-color: white;
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .intro {
@@ -135,6 +136,7 @@ section {
     padding: 40px;
     text-align: left;
     align-items: center;
+    margin-bottom: auto;
 }
 
 .text {
@@ -174,13 +176,15 @@ section {
 
 /* FOOTER */
 footer {
-  display: none;
+  /* display: none; */
   bottom: 0;
   width: 100%;
   text-align: center;
   background: #000000;
-  padding: 20px;
+  /* padding: 20px; */
   position: fixed;
+  /* border-top-style: dashed; */
+  opacity: 90%;
 }
 
 /* IMAGE */
@@ -213,6 +217,7 @@ img {
   .selfy_out {
     display: none;
   }
+  footer {position: relative;}
 }
 
 /* TABLES */
