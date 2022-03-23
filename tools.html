@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+          /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+          function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+        </script>
+        <title>Léa Brunschwig</title>
+    </head>
+
+    <body>
+
+      <!-- Header -->
+      <header>
+        <h1>Léa Brunschwig</h1>
+        <p>Early Stage Researcher</p>
+      </header>
+
+      <!-- Navigation Bar -->
+      <nav class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="publications.html">Publications</a>
+        <a href="tools.html" class="active">Tools</a>
+        <a href="research_projects.html">Research Projects</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+
+      <section id="alter">
+        <h2>AlteR</h2>
+
+        AR Modelling
+
+        https://alter-ar.github.io
+
+        AlteR is an iOS application for creating models and interacting with them
+        using augmented reality and iPhones or iPads. Our app gives you the opportunity
+        to live a complete new modelling experience for any domain meta-model that you can imagine.
+      </section>
+
+      <section id="dslcomet">
+        <h2>DSL-Comet</h2>
+
+        Dsl mobile
+
+        https://diagrameditorserver.herokuapp.com
+
+        DSL-comet is an iOS tool that allows graphical, collaborative modelling on mobile devices.
+Our architecture permits creating both Sirius and mobile editors from a single description.
+Models can be stored locally or in a server, and they are compatible with EMF.
+
+      </section>
+
+      <section id="pauware">
+        <h2>PauWare</h2>
+
+        PauWare
+
+        https://pauware.univ-pau.fr
+        https://pauware.univ-pau.fr/generator/
+        POSTER
+
+
+        PauWare engine is a Java API, i.e., a set of Java classes and interfaces
+        making up an execution engine for State Chart XML (SCXML) and UML State Machine Diagrams.
+        Both are a variant of Harel's Statecharts, which are used to model and to implement
+        reactive software-intensive systems.
+
+        Pauware Code Generator is an online platform that generate full executable
+        state machines based on the PauWare engine API from XMI file produced by most UML Case tools. Try it now
+      </section>
+
+      <section id="xmodstudio">
+        <h2>XModelling Studio</h2>
+
+        XModelling Studio
+
+        https://pauware.univ-pau.fr/xmodeling/index.html
+
+        Xmodeling Studio is an Eclipse Modeling Framework plug-in assisting the
+        language engineers with the design and implementation executable DSLs and
+        their corresponding execute engine taking in account the business operations
+        and their data flow. It also gives the opportunity to the software engineer
+        to integrate the language engineer's work to the Java environment of their choice
+      </section>
+
+      <footer>
+        copyright
+        social networks
+        contact
+      </footer>
+
+    </body>
+</html>

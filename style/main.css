@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+
+body
+{
+  background-color: #000000 ;
+  color: white;
+  font-family: Verdana, Arial;
+  margin: 0;
+  height: 100%;
+  text-align: center;
+  font-size: 1vw;
+}
+
+h1 {
+  color: #a88fac;
+}
+
+h2 {
+  color: #826C7F;
+}
+
+a {
+  color : #c3f73a;
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  display: none;
+  padding: 10px;
+  text-align: center;
+  background-color: #000000;
+}
+
+header h1 {
+  color: white;
+}
+
+/* MENU */
+
+.topnav {
+  overflow: hidden;
+  font-size: 25px;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #999999;
+  text-align: center;
+  padding: 74px 76px;
+  text-decoration: none;
+  width: 20%;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+
+.topnav a:hover {
+    background-color: #000000;
+    color: #a88fac;
+}
+
+.topnav a.active {
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+  font-size: 27px;
+}
+
+/* Hamburger */
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the
+first one ("Home"). Show the link that contains should open and close the topnav
+(.icon) */
+@media screen and (max-width: 1320px) {
+  .topnav a:not(.active) {display: none;}
+  header {displa: none;}
+  .topnav a.active {
+    width: auto;
+  }
+  .topnav {background-color: #000000;}
+  .topnav a {padding: 24px 26px;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    width:auto;
+    background-color: #000000;
+  }
+  body {
+    font-size: 18px;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user
+clicks on the icon. This class makes the topnav look good on small screens
+(display the links vertically instead of horizontally) */
+@media screen and (max-width: 1320px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width:auto;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    border-radius: 0% 0% 0% 0%;
+    background-color: #000000;
+    padding: 14px 16px;
+  }
+}
+
+/* SECTION */
+section {
+  /* margin-bottom: 50px; */
+  border-style: dashed;
+  border-color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 10px;
+}
+
+.intro {
+    display: flex;
+    padding: 40px;
+    text-align: left;
+    align-items: center;
+}
+
+.text {
+  vertical-align: middle;
+  font-size: 1.5vw;
+}
+
+.text h1 {
+  font-size: 3vw;
+}
+
+.logos {
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+.logos a {
+  color: white;
+}
+
+.logos a:hover {
+  color: #c3f73a;
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1320px) {
+  .text {
+    font-size: 20px;
+  }
+  .text h1 {
+    font-size: 40px;
+  }
+  .logos {
+    font-size: 30px;
+  }
+}
+
+/* FOOTER */
+footer {
+  display: none;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: #000000;
+  padding: 20px;
+  position: fixed;
+}
+
+/* IMAGE */
+
+img {
+  /* width: 400px;
+  height: auto; */
+}
+
+.selfy {
+  max-width: 90%;
+  height: auto;
+  width: auto\9; /* ie8 */
+  filter: grayscale();
+}
+
+.selfy_in {
+  display:none;
+}
+
+.selfy_out {
+  display: inherit;
+}
+
+@media screen and (max-width: 1320px) {
+  .selfy_in {
+    display:inherit;
+    text-align: center;
+  }
+  .selfy_out {
+    display: none;
+  }
+}
+
+/* TABLES */
+
+table {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
+  padding: 5px;
+}
+
+td.date {
+  vertical-align: top;
+  text-align: right;
+  width: 20%;
+}
+
+td.date p {
+  font-weight: bold;
+  color: #ff9b85;
+}
+
+td.vertical-top {
+  vertical-align: top;
+}
