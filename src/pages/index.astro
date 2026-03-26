@@ -3,14 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import { getAcademicProfile } from '../lib/openalex';
 const { metrics } = await getAcademicProfile();
 ---
-<Layout title="Accueil">
+<!-- <Layout title="Accueil">
+
   <section class="mb-12">
-    <h1 class="text-4xl font-bold mb-4">Pr. [Votre Nom]</h1>
-    <p class="text-xl text-gray-600 leading-relaxed">
-      Enseignante-chercheuse spécialisée en <strong>Low-code platforms</strong> 
-      et <strong>Green IT</strong>. Je travaille sur l'optimisation énergétique 
-      du développement logiciel.
-    </p>
+    <p>Docteur en Informatique</p>
+
   </section>
 
   <div class="grid grid-cols-3 gap-8 p-6 bg-gray-50 rounded-lg">
@@ -27,4 +24,27 @@ const { metrics } = await getAcademicProfile();
       <p class="text-sm uppercase tracking-wide">H-index</p>
     </div>
   </div>
+</Layout> -->
+
+<Layout title="Accueil">
+  <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+    <div class="flex-1">
+      <span class="text-green-600 font-bold tracking-widest text-xs uppercase">Enseignante-Chercheuse</span>
+      <h1 class="text-5xl font-black text-slate-900 mt-2 mb-6">Expertise en Low-Code & Green IT.</h1>
+      <p class="text-lg text-slate-600 leading-relaxed mb-6">
+        Je dédie mes recherches à la réduction de l'empreinte environnementale du numérique 
+        via l'optimisation des plateformes de développement rapide.
+      </p>
+      <div class="flex gap-4">
+        <a href="/cv" class="bg-slate-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-800 transition-colors">Voir mon CV</a>
+        <a href="#contact" class="px-6 py-3 rounded-lg font-medium border border-slate-300 hover:bg-slate-50">Me contacter</a>
+      </div>
+    </div>
+    <div class="w-48 h-48 bg-green-100 rounded-2xl rotate-3 flex items-center justify-center border-2 border-green-200 shadow-xl">
+       <span class="text-6xl">🌱</span>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    </div>
 </Layout>
