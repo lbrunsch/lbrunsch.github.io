@@ -1,7 +1,7 @@
 // src/lib/openalex.ts
 // Functions to fetch academic profile and publications from OpenAlex API for my profile, using the OpenAlex ID and email for contact. The data is structured according to the MetricsPerso and Paper types defined in src/types/openalex.ts.
 
-import type { MetricsPerso, Paper } from "@/types/openalex";
+import type { MetricsPerso, Paper, ScopusMetrics, ScopusPublication } from "@/types/metrics";
 
 const MY_ID = "a5007853822"; // OpenAlex ID for Léa Brunschwig
 const EMAIL = "lea.brunschwig@univ-pau.fr" // Email for OpenAlex API contact

@@ -25,3 +25,18 @@ export interface Paper {
         name: string;
     }>;
 }
+
+// Scopus
+export interface ScopusMetrics {
+  hIndex: number;
+  citationCount: number;
+  documentCount: number;
+}
+
+export interface ScopusPublication {
+  title: string;
+  journal: string;
+  year: string;
+  doi: string;
+  citations: number;
+}

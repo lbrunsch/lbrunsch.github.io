@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getAcademicProfile } from '../lib/openalex';
+import { getAcademicProfile } from '../lib/metrics';
 const { publications } = await getAcademicProfile();
 ---
 <Layout title="Publications">
