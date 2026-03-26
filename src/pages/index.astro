@@ -1,0 +1,36 @@
+---
+// src/pages/index.astro
+
+import { getAcademicProfile } from '../lib/openalex.js';
+const { metrics } = await getAcademicProfile();
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+
+		<section>
+			<h2>Impact de la recherche</h2>
+			<div class="stats-grid">
+				<div class="stat-card">
+					<span class="value">{metrics.nbCitations}</span>
+					<span class="label">Citations</span>
+				</div>
+				<div class="stat-card">
+					<span class="value">{metrics.hIndex}</span>
+					<span class="label">H-Index</span>
+				</div>
+			</div>
+		</section>
+
+	</body>
+</html>
