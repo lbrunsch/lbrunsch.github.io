@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getAcademicProfile } from '../lib/openalex';
+const { publications } = await getAcademicProfile();
+---
+<Layout title="Publications">
+  <h1 class="text-3xl font-bold mb-8">Travaux de Recherche</h1>
+  <div class="space-y-8">
+    {publications.map((pub) => (
+      <article class="border-l-4 border-green-500 pl-4">
+        <h2 class="text-xl font-semibold leading-snug">{pub.title}</h2>
+        <p class="text-gray-500 italic">{pub.primary_location.source?.display_name} — {pub.publication_year}</p>
+        <p class="text-sm text-gray-400 mt-2">Citations : {pub.cited_by_count} | <a href={pub.doi} target="_blank">DOI</a></p>
+      </article>
+    ))}
+  </div>
+</Layout>

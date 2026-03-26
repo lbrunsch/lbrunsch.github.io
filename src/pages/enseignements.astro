@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+interface Course { title: string; level: string; hours: number; desc: string; }
+const courses: Course[] = [
+  { title: "Éco-conception logicielle", level: "Master 2", hours: 30, desc: "Analyse du cycle de vie des applications." },
+  { title: "Introduction au Low-Code", level: "Licence 3", hours: 24, desc: "Développement rapide et enjeux de gouvernance." }
+];
+---
+<Layout title="Enseignements">
+  <h1 class="text-3xl font-bold mb-8">Enseignements</h1>
+  <table class="w-full text-left">
+    <thead>
+      <tr class="border-b">
+        <th class="py-2">Niveau</th><th class="py-2">Cours</th><th class="py-2">Volume</th>
+      </tr>
+    </thead>
+    <tbody>
+      {courses.map(c => (
+        <tr class="border-b hover:bg-gray-50">
+          <td class="py-4 text-green-700 font-medium">{c.level}</td>
+          <td class="py-4"><strong>{c.title}</strong><br/><span class="text-sm text-gray-500">{c.desc}</span></td>
+          <td class="py-4">{c.hours}h</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</Layout>
