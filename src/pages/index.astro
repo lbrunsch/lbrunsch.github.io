@@ -1,36 +1,30 @@
 ---
-// src/pages/index.astro
-
-import { getAcademicProfile } from '../lib/openalex.js';
+import Layout from '../layouts/Layout.astro';
+import { getAcademicProfile } from '../lib/openalex';
 const { metrics } = await getAcademicProfile();
-
 ---
+<Layout title="Accueil">
+  <section class="mb-12">
+    <h1 class="text-4xl font-bold mb-4">Pr. [Votre Nom]</h1>
+    <p class="text-xl text-gray-600 leading-relaxed">
+      Enseignante-chercheuse spécialisée en <strong>Low-code platforms</strong> 
+      et <strong>Green IT</strong>. Je travaille sur l'optimisation énergétique 
+      du développement logiciel.
+    </p>
+  </section>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-
-		<section>
-			<h2>Impact de la Recherche</h2>
-			<div class="stats-grid">
-				<div class="stat-card">
-					<span class="value">{metrics.nbCitations}</span>
-					<span class="label">Citations</span>
-				</div>
-				<div class="stat-card">
-					<span class="value">{metrics.hIndex}</span>
-					<span class="label">H-Index</span>
-				</div>
-			</div>
-		</section>
-
-	</body>
-</html>
+  <div class="grid grid-cols-3 gap-8 p-6 bg-gray-50 rounded-lg">
+    <div class="text-center">
+      <p class="text-3xl font-bold text-green-700">{metrics.totalWorks}</p>
+      <p class="text-sm uppercase tracking-wide">Publications</p>
+    </div>
+    <div class="text-center border-x">
+      <p class="text-3xl font-bold text-green-700">{metrics.totalCitations}</p>
+      <p class="text-sm uppercase tracking-wide">Citations</p>
+    </div>
+    <div class="text-center">
+      <p class="text-3xl font-bold text-green-700">{metrics.hIndex}</p>
+      <p class="text-sm uppercase tracking-wide">H-index</p>
+    </div>
+  </div>
+</Layout>
