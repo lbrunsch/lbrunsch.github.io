@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Empêcher le scraping pour l'entraînement des IA (GPT, CCBot, etc.)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Lien vers votre plan de site pour le SEO
+# Sitemap: https://votre-nom.github.io/sitemap-index.xml
