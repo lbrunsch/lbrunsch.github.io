@@ -1,17 +1,71 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getAcademicProfile } from '../lib/metrics';
-const { publications } = await getAcademicProfile();
+
+import publications from '../data/publications.json';
+import type { Publication } from '../lib/metrics';
+
+const publicationsPerYear = publications.reduce((acc, pub) => {
+  const year = pub.year;
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(pub);
+  return acc;
+}, {} as Record<number, Publication[]>);
+
+const years = Object.keys(publicationsPerYear).map(Number).sort((a, b) => b - a);
+
+const typeColors = {
+  Journal: 'bg-cyan-100 text-cyan-800',
+  Conference: 'bg-green-100 text-green-800',
+  Thesis: 'bg-yellow-100 text-yellow-800',
+  Other: 'bg-gray-100 text-gray-800',
+};
 ---
 <Layout title="Publications">
-  <h1 class="text-3xl font-bold mb-8">Travaux de Recherche</h1>
   <div class="space-y-8">
-    {publications.map((pub) => (
-      <article class="border-l-4 border-green-500 pl-4">
-        <h2 class="text-xl font-semibold leading-snug">{pub.title}</h2>
-        <p class="text-gray-500 italic">{pub.primary_location.source?.display_name} — {pub.publication_year}</p>
-        <p class="text-sm text-gray-400 mt-2">Citations : {pub.cited_by_count} | <a href={pub.doi} target="_blank">DOI</a></p>
-      </article>
+    <div class="max-w-4xl mx-auto p-6 space-y-16">
+    {years.map(year => (
+        <section>
+            <h2 class="text-4xl font-black text-slate-300 mb-8 border-b border-slate-100 pb-2 italic">
+                {year}
+            </h2>
+            
+            <div class="space-y-10">
+                {publicationsPerYear[year].map((pub) => (
+                    <article class="group">
+                        <div class="flex flex-wrap gap-2 mb-2">
+                            <span class={`text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded ${typeColors[pub.type]}`}>
+                                {pub.type}
+                            </span>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-slate-800 leading-tight group-hover:text-green-600 transition-colors">
+                            {pub.title}
+                        </h3>
+
+                        <p class="text-slate-600 mt-2 italic text-sm">
+                            {pub.venue}
+                        </p>
+
+                        <p class="text-slate-500 text-sm mt-2">
+                            {pub.authors.map((auth, index) => (
+                                <span class={auth.isMe ? "font-bold text-slate-900" : ""}>
+                                    {auth.name}{index < pub.authors.length - 1 ? ", " : ""}
+                                </span>
+                            ))}
+                        </p>
+
+                        {pub.doi && (
+                            <a href={pub.doi} target="_blank" class="inline-block mt-3 text-xs font-medium text-green-800 hover:text-green-600">
+                                Voir la publication →
+                            </a>
+                        )}
+                    </article>
+                ))}
+            </div>
+        </section>
     ))}
   </div>
 </Layout>

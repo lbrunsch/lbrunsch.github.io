@@ -20,23 +20,10 @@ export interface Paper {
     title: string;
     publicationYear: number;
     doi: string;
+    venue: string;
+    type: 'Journal' | 'Conference' | 'Thesis' | 'Other';
     authors: Array<{
-        id: string;
         name: string;
+        isMe: boolean;
     }>;
-}
-
-// Scopus
-export interface ScopusMetrics {
-  hIndex: number;
-  citationCount: number;
-  documentCount: number;
-}
-
-export interface ScopusPublication {
-  title: string;
-  journal: string;
-  year: string;
-  doi: string;
-  citations: number;
 }

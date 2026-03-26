@@ -1,0 +1,192 @@
+[
+  {
+    "id": "https://openalex.org/W7124671853",
+    "title": "DSLs for executable, active, and sustainable modeling",
+    "year": 2025,
+    "doi": "http://www.theses.fr/2025PAUU3056/document",
+    "venue": "theses.fr (ABES)",
+    "type": "Thesis",
+    "authors": [
+      {
+        "name": "Léa Brunschwig",
+        "isMe": true
+      }
+    ]
+  },
+  {
+    "id": "https://openalex.org/W7124823540",
+    "title": "DSL pour une modélisation exécutable, active et responsable",
+    "year": 2025,
+    "doi": "https://theses.hal.science/tel-05462658",
+    "venue": "SPIRE - Sciences Po Institutional REpository",
+    "type": "Thesis",
+    "authors": [
+      {
+        "name": "Léa Brunschwig",
+        "isMe": true
+      }
+    ]
+  },
+  {
+    "id": "https://openalex.org/W4403664558",
+    "title": "Cross-Detection of Mobile-specific Energy Hotspots: MBSE to the Rescue",
+    "year": 2024,
+    "doi": "https://doi.org/10.1145/3652620.3687797",
+    "venue": "Proceedings of the ACM/IEEE 27th International Conference on Model Driven Engineering Languages and Systems",
+    "type": "Conference",
+    "authors": [
+      {
+        "name": "Léa Brunschwig",
+        "isMe": true
+      },
+      {
+        "name": "Olivier Le Goaër",
+        "isMe": false
+      }
+    ]
+  },
+  {
+    "id": "https://openalex.org/W3175763363",
+    "title": "Modelling on mobile devices",
+    "year": 2021,
+    "doi": "https://doi.org/10.1007/s10270-021-00897-8",
+    "venue": "Software & Systems Modeling",
+    "type": "Journal",
+    "authors": [
+      {
+        "name": "Léa Brunschwig",
+        "isMe": true
+      },
+      {
+        "name": "Esther Guerra",
+        "isMe": false
+      },
+      {
+        "name": "Juan de Lara",
+        "isMe": false
+      }
+    ]
+  },
+  {
+    "id": "https://openalex.org/W3161939836",
+    "title": "Towards Domain-Specific Modelling Environments Based on Augmented Reality",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/icse-nier52604.2021.00020",
+    "venue": "2021 IEEE/ACM 43rd International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER)",
+    "type": "Conference",
+    "authors": [
+      {
+        "name": "Léa Brunschwig",
+        "isMe": true
+      },
+      {
+        "name": "Rubén Campos-López",
+        "isMe": false
+      },
+      {
+        "name": "Esther Guerra",
+        "isMe": false
+      },
+      {
+        "name": "Juan de Lara",
+        "isMe": false
+      }
+    ]
+  },
+  {
+    "id": "https://openalex.org/W3138585294",
+    "title": "A software development process based on UML state machines",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/icaase51408.2020.9380117",
+    "venue": "2020 International Conference on Advanced Aspects of Software Engineering (ICAASE)",
+    "type": "Conference",
+    "authors": [
+      {
+        "name": "Eric Cariou",
+        "isMe": false
+      },
+      {
+        "name": "Léa Brunschwig",
+        "isMe": true
+      },
+      {
+        "name": "Olivier Le Goaër",
+        "isMe": false
+      },
+      {
+        "name": "Franck Barbier",
+        "isMe": false
+      }
+    ]
+  },
+  {
+    "id": "https://openalex.org/W3096114977",
+    "title": "Towards access control for collaborative modelling apps",
+    "year": 2020,
+    "doi": "https://doi.org/10.1145/3417990.3420201",
+    "venue": "Proceedings of the 23rd ACM/IEEE International Conference on Model Driven Engineering Languages and Systems: Companion Proceedings",
+    "type": "Conference",
+    "authors": [
+      {
+        "name": "Léa Brunschwig",
+        "isMe": true
+      },
+      {
+        "name": "Esther Guerra",
+        "isMe": false
+      },
+      {
+        "name": "Juan de Lara",
+        "isMe": false
+      }
+    ]
+  },
+  {
+    "id": "https://openalex.org/W3016490088",
+    "title": "Xmodeling Studio : Un outil pour définir des DSL exécutables",
+    "year": 2018,
+    "doi": "https://univ-pau.hal.science/hal-01912828",
+    "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
+    "type": "Conference",
+    "authors": [
+      {
+        "name": "Léa Brunschwig",
+        "isMe": true
+      },
+      {
+        "name": "Olivier Le Goaër",
+        "isMe": false
+      },
+      {
+        "name": "Eric Cariou",
+        "isMe": false
+      }
+    ]
+  },
+  {
+    "id": "https://openalex.org/W4299384620",
+    "title": "A Generic Solution for Weaving Business Code into Executable Models",
+    "year": 2018,
+    "doi": "https://univ-pau.hal.science/hal-01912827",
+    "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
+    "type": "Conference",
+    "authors": [
+      {
+        "name": "Olivier Le Goaër",
+        "isMe": false
+      },
+      {
+        "name": "Cariou, Eric",
+        "isMe": false
+      },
+      {
+        "name": "Léa Brunschwig",
+        "isMe": true
+      },
+      {
+        "name": "Franck Barbier",
+        "isMe": false
+      }
+    ]
+  }
+]
