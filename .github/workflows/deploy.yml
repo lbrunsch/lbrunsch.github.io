@@ -1,11 +1,11 @@
-name: Deploy Astro site to GitHub Pages
+name: Deploy Astro to GitHub Pages
 on:
   push:
     branches:
       - master
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,9 +16,8 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: touch dist/.nojekyll
-      - uses: peaceiris/actions-gh-pages@v3
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          enable_nojekyll: true
+          path: ./dist
+      - uses: actions/deploy-pages@v1
