@@ -1,27 +1,332 @@
 ---
 import Layout from '../layouts/Layout.astro';
-interface Course { title: string; level: string; hours: number; desc: string; }
-const courses: Course[] = [
-  { title: "Éco-conception logicielle", level: "Master 2", hours: 30, desc: "Analyse du cycle de vie des applications." },
-  { title: "Introduction au Low-Code", level: "Licence 3", hours: 24, desc: "Développement rapide et enjeux de gouvernance." }
+import { AcademicYear } from '../lib/types';
+
+const teachingList: AcademicYear[] = [
+  {
+    year: "2025-2026",
+    contractType: "ATER",
+    courses: [
+      {
+        title: "Systèmes Distribués",
+        level: "L3",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Licence Informatique",
+        location: "UPPA",
+        hoursETD: 72.25
+      },
+      {
+        title: "Développement Web Avancé",
+        level: "M1",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 36.5
+      },
+      {
+        title: "Projet Tutoré",
+        level: "M1",
+        resp: "Jury",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 4.5
+      },
+      {
+        title: "Ingénierie des Modèles",
+        level: "M2",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 38,
+      },
+      {
+        title: "Programmation Mobile Android",
+        level: "M2",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 41.5
+      }
+    ]
+  },
+  {
+    year: "2024-2025",
+    contractType: "CDD",
+    courses: 
+    [
+      {
+        title: "Algorithmique I",
+        level: "L1",
+        resp: "TP",
+        target: "Licence Informatique",
+        location: "UPPA",
+        hoursETD: 20
+      },
+      {
+          title: "Programmation Orientée Objet",
+          level: "L2",
+          resp: "Responsable de l'UE | CM | TD",
+          target: "Licence Informatique",
+          location: "UPPA",
+          hoursETD: 18
+      },
+      {
+          title: "Systèmes d'Exploitation II",
+          level: "L2",
+          resp: "Responsable de l'UE | CM | TD | TP",
+          target: "Licence Informatique",
+          location: "UPPA",
+          hoursETD: 68.25
+      },
+      {
+        title: "Techniques de Programmation Appliquée à la Biologie",
+        level: "L3",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Licence Biologie",
+        location: "UPPA",
+        hoursETD: 18.25
+      },
+      {
+        title: "Systèmes Distribués",
+        level: "L3",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Licence Informatique",
+        location: "UPPA",
+        hoursETD: 83.5
+      },
+      {
+        title: "Développement Web Avancé",
+        level: "M1",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 36.5
+      },
+      {
+        title: "Projet Tutoré",
+        level: "M1",
+        resp: "Jury",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 6.75
+      },
+      {
+        title: "Ingénierie des Modèles",
+        level: "M2",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 38,
+      },
+      {
+        title: "Programmation Mobile Android",
+        level: "M2",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 41.5
+      }
+    ]
+  },
+  {
+    year: "2023-2024",
+    contractType: "CDD",
+    courses: 
+    [
+      {
+        title: "Algorithmique I",
+        level: "L1",
+        resp: "TP",
+        target: "Licence Informatique",
+        location: "UPPA",
+        hoursETD: 10
+      },
+      {
+          title: "Programmation Orientée Objet",
+          level: "L2",
+          resp: "Responsable de l'UE | CM | TD",
+          target: "Licence Informatique",
+          location: "UPPA",
+          hoursETD: 18
+      },
+      {
+          title: "Systèmes d'Exploitation II",
+          level: "L2",
+          resp: "Responsable de l'UE | CM | TD | TP",
+          target: "Licence Informatique",
+          location: "UPPA",
+          hoursETD: 29.25
+      },
+      {
+          title: "Systèmes d'Exploitation II",
+          level: "L3",
+          resp: "Responsable de l'UE | CM | TD | TP",
+          target: "Licence Informatique",
+          location: "UPPA",
+          hoursETD: 68.25
+      },
+      {
+        title: "Techniques de Programmation Appliquée à la Biologie",
+        level: "L3",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Licence Biologie",
+        location: "UPPA",
+        hoursETD: 18.25
+      },
+      {
+        title: "Systèmes Distribués",
+        level: "L3",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Licence Informatique",
+        location: "UPPA",
+        hoursETD: 83.5
+      },
+      {
+        title: "Développement Web Avancé",
+        level: "M1",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 36.5
+      },
+      {
+        title: "Projet Tutoré",
+        level: "M1",
+        resp: "Jury",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 4.5
+      },
+      {
+        title: "Ingénierie des Modèles",
+        level: "M2",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 38,
+      },
+      {
+        title: "Programmation Mobile Android",
+        level: "M2",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 30.25
+      }
+    ]
+  },
+  {
+    year: "2022-2023",
+    contractType: "CDD",
+    courses: 
+    [
+      {
+          title: "Programmation Orientée Objet",
+          level: "L2",
+          resp: "Responsable de l'UE | CM | TD",
+          target: "Licence Informatique",
+          location: "UPPA",
+          hoursETD: 22.5
+      },
+      {
+          title: "Systèmes d'Exploitation II",
+          level: "L3",
+          resp: "Responsable de l'UE | CM | TD | TP",
+          target: "Licence Informatique",
+          location: "UPPA",
+          hoursETD: 82.5
+      },
+      {
+        title: "Conception des Systèmes d'Information",
+        level: "L3",
+        resp: "TD",
+        target: "Licence Informatique",
+        location: "UPPA",
+        hoursETD: 15
+      },
+      {
+        title: "Systèmes Distribués",
+        level: "L3",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Licence Informatique",
+        location: "UPPA",
+        hoursETD: 89.5
+      },
+      {
+        title: "Développement Web Avancé",
+        level: "M1",
+        resp: "Responsable de l'UE | CM | TD | TP",
+        target: "Master Technologies de l'Internet et Master Informatique Big Data",
+        location: "UPPA",
+        hoursETD: 50.5
+      },
+      {
+        title: "Projet Tutoré",
+        level: "M1",
+        resp: "Jury",
+        target: "Master Technologies de l'Internet",
+        location: "UPPA",
+        hoursETD: 8.5
+      }
+    ]
+  }
 ];
+
+const getTotalHours = (year: AcademicYear) => year.courses.reduce((sum, c) => sum + c.hoursETD, 0);
 ---
 <Layout title="Enseignements">
-  <h1 class="text-3xl font-bold mb-8">Enseignements</h1>
-  <table class="w-full text-left">
-    <thead>
-      <tr class="border-b">
-        <th class="py-2">Niveau</th><th class="py-2">Cours</th><th class="py-2">Volume</th>
-      </tr>
-    </thead>
-    <tbody>
-      {courses.map(c => (
-        <tr class="border-b hover:bg-gray-50">
-          <td class="py-4 text-green-700 font-medium">{c.level}</td>
-          <td class="py-4"><strong>{c.title}</strong><br/><span class="text-sm text-gray-500">{c.desc}</span></td>
-          <td class="py-4">{c.hours}h</td>
-        </tr>
+  <main class="max-w-5xl mx-auto px-6">
+    
+    <div class="space-y-16">
+      {teachingList.map((period) => (
+        <section class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          {/* Header de l'année */}
+          <div class="bg-slate-50 border-b border-slate-200 p-6 flex flex-wrap justify-between items-center gap-4">
+            <div>
+              <h2 class="text-xl font-bold text-slate-800">{period.year}</h2>
+              <p class="text-sm text-green-600 font-medium">{period.contractType}</p>
+            </div>
+            <div class="bg-white border border-slate-200 px-4 py-2 rounded-lg shadow-sm">
+              <span class="text-xs uppercase tracking-wider text-slate-400 font-bold block">Total Annuel</span>
+              <span class="text-2xl font-black text-slate-800">{getTotalHours(period)} h <small class="text-sm font-normal text-slate-400 italic">ETD</small></span>
+            </div>
+          </div>
+
+          {/* Tableau des cours */}
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-slate-50/50 text-slate-500 text-xs uppercase tracking-widest border-b border-slate-100">
+                  <th class="px-6 py-4 font-semibold">Cours</th>
+                  <th class="px-6 py-4 font-semibold">Public</th>
+                  <th class="px-6 py-4 font-semibold">Lieu</th>
+                  <th class="px-6 py-4 font-semibold">Rôle</th>
+                  <th class="px-6 py-4 font-semibold text-right">Volume ETD</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                {period.courses.map((c) => (
+                  <tr class="hover:bg-slate-50 transition-colors group">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-2">
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-1.5 py-0.5 rounded">
+                          {c.level}
+                        </span>
+                        <span class="font-bold text-slate-800 group-hover:text-blue-600 transition-colors">{c.title}</span>
+
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-slate-600 text-sm">{c.target}</td>
+                    <td class="px-6 py-4 text-slate-600 text-sm">{c.location}</td>
+                    <td class="px-6 py-4 text-slate-600 text-sm">{c.resp}</td>
+                    <td class="px-6 py-4 text-right font-mono font-medium text-slate-700">{c.hoursETD} h</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
       ))}
-    </tbody>
-  </table>
+    </div>
+  </main>
 </Layout>
