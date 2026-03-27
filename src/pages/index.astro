@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SocialLinks from './components/SocialLinks.astro';
 import { getAcademicProfile } from '../lib/metrics';
 const { metrics } = await getAcademicProfile();
 ---
@@ -43,6 +44,8 @@ const { metrics } = await getAcademicProfile();
        <span class="text-6xl">🌱</span>
     </div>
   </div>
+
+  <SocialLinks />
   
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     </div>
