@@ -5,7 +5,29 @@ import { getAcademicProfile } from '../lib/metrics';
 import publications from '../data/publications.json';
 import type { Publication } from '../lib/metrics';
 
-const publicationsPerYear = publications.reduce((acc, pub) => {
+const filteredPublications = publications.reduce((acc, current) => {
+    
+    const existingThesisIndex = acc.findIndex(p => p.type === 'Thesis' && p.year === current.year);
+
+    if (current.type === 'Thesis' && existingThesisIndex !== -1) {
+        const existingThesis = acc[existingThesisIndex];
+    
+    // Si la thèse actuelle a des accents (é, à, è, ç) et pas l'ancienne, on remplace
+    const hasFrenchChars = /[éàèêëîïôûùç]/i.test(current.title);
+    const existingHasFrenchChars = /[éàèêëîïôûùç]/i.test(existingThesis.title);
+
+    if (hasFrenchChars && !existingHasFrenchChars) {
+      acc[existingThesisIndex] = current;
+    }
+    // Sinon, on garde l'existante et on ignore celle-ci
+    return acc;
+  }
+
+  acc.push(current);
+  return acc;
+}, [] as typeof publications);
+
+const publicationsPerYear = filteredPublications.reduce((acc, pub) => {
   const year = pub.year;
   if (!acc[year]) {
     acc[year] = [];
@@ -25,14 +47,14 @@ const typeColors = {
 ---
 <Layout title="Publications">
   <div class="space-y-8">
-    <div class="max-w-4xl mx-auto p-6 space-y-16">
+    <div class="max-w-4xl mx-auto p-6 space-y-6">
     {years.map(year => (
         <section>
-            <h2 class="text-4xl font-black text-slate-300 mb-8 border-b border-slate-100 pb-2 italic">
+            <h2 class="text-4xl font-black text-slate-300 mb-4 border-b border-slate-100 pb-2 italic">
                 {year}
             </h2>
             
-            <div class="space-y-10">
+            <div class="space-y-4">
                 {publicationsPerYear[year].map((pub) => (
                     <article class="group">
                         <div class="flex flex-wrap gap-2 mb-2">
