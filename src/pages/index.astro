@@ -4,49 +4,39 @@ import SocialLinks from './components/SocialLinks.astro';
 import { getAcademicProfile } from '../lib/metrics';
 const { metrics } = await getAcademicProfile();
 ---
-<!-- <Layout title="Accueil">
-
-  <section class="mb-12">
-    <p>Docteur en Informatique</p>
-
-  </section>
-
-  <div class="grid grid-cols-3 gap-8 p-6 bg-gray-50 rounded-lg">
-    <div class="text-center">
-      <p class="text-3xl font-bold text-green-700">{metrics.totalWorks}</p>
-      <p class="text-sm uppercase tracking-wide">Publications</p>
-    </div>
-    <div class="text-center border-x">
-      <p class="text-3xl font-bold text-green-700">{metrics.totalCitations}</p>
-      <p class="text-sm uppercase tracking-wide">Citations</p>
-    </div>
-    <div class="text-center">
-      <p class="text-3xl font-bold text-green-700">{metrics.hIndex}</p>
-      <p class="text-sm uppercase tracking-wide">H-index</p>
-    </div>
-  </div>
-</Layout> -->
-
 <Layout title="Accueil">
-  <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
-    <div class="flex-1">
-      <span class="text-green-600 font-bold tracking-widest text-xs uppercase">Docteur en Informatique</span>
-      <h1 class="text-5xl font-black text-slate-900 mt-2 mb-6">Chercheuse en Génie Logiciel</h1>
-      <p class="text-lg text-slate-600 leading-relaxed mb-6">
-        ATER au sein du laboratoire LIUPPA et membre de l'équipe Génie Logiciel, je suis spécialisée en <em>Low Code</em> et en <em>Green Code</em>.
-      </p>
-      <div class="flex gap-4">
+  <div class="mb-20"> <div class="flex flex-col md:flex-row items-start gap-12">
+      <div class="flex-1">
+        <span class="text-green-600 font-bold tracking-widest text-xs uppercase">Docteur en Informatique</span>
+        <h1 class="text-5xl font-black text-slate-900 mt-2 mb-6">Chercheuse en Génie Logiciel</h1>
+        
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+          Attachée Temporaire d'Enseignement et de Recherche (ATER) à l'Université de Pau et des Pays de l'Adour, je suis membre du laboratoire <a href="https://liuppa.univ-pau.fr/" class="text-green-600 hover:underline">LIUPPA</a> au sein de l'équipe <a href="https://liuppa.univ-pau.fr/fr/organisation/equipes-de-recherche/equipe-gl.html" class="text-green-600 hover:underline">Génie Logiciel</a>. Mes recherches portent sur les thématiques du <em>Low Code</em> et du <em>Green Code</em>.
+        </p>
+      </div>
+
+      <div class="hidden md:flex w-48 h-48 bg-green-100 rounded-2xl rotate-3 items-center justify-center border-2 border-green-200 shadow-xl mt-12">
+         <span class="text-6xl">🌱</span>
+      </div>
+    </div>
+
+    <div class="max-w-2xl"> <h4 class="text-2xl font-black text-slate-900 mt-8 mb-6">Thématiques de recherche</h4>
+      <ul class="list-none pl-10 space-y-2">
+          <li class="relative before:content-['💻'] before:absolute before:-left-8">Ingénierie des Modèles</li>
+          <li class="relative before:content-['💻'] before:absolute before:-left-8">Low Code / No Code</li>
+          <li class="relative before:content-['🌱'] before:absolute before:-left-8">Génie logiciel pour le développement durable</li>
+          <li class="relative before:content-['🌱'] before:absolute before:-left-8">Éco-conception logicielle</li>
+          <li class="relative before:content-['🌱'] before:absolute before:-left-8">Empreinte carbone du logiciel</li>
+      </ul>
+
+      <div class="flex gap-4 py-8">
         <a href="/cv" class="bg-slate-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-800 transition-colors">Voir mon CV</a>
         <a href="mailto:lea.brunsch@univ-pau.fr" class="px-6 py-3 rounded-lg font-medium border border-slate-300 hover:bg-slate-50">Me contacter</a>
       </div>
-    </div>
-    <div class="w-48 h-48 bg-green-100 rounded-2xl rotate-3 flex items-center justify-center border-2 border-green-200 shadow-xl">
-       <span class="text-6xl">🌱</span>
+      
+      <SocialLinks />
     </div>
   </div>
-
-  <SocialLinks />
   
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
 </Layout>
