@@ -28,7 +28,7 @@ export async function getAcademicProfile() {
     };
 }
 
-async function fetchPublications() {
+export async function fetchPublications() {
 
     try {
         // Fetch author's publications
@@ -73,5 +73,6 @@ async function fetchPublications() {
     }
 }
 
-// Run the fetch function to get publications and save them to a JSON file
-fetchPublications();
+if (process.argv[1]?.endsWith('metrics.ts')) {
+    fetchPublications();
+}
